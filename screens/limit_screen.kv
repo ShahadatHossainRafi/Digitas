@@ -1,0 +1,29 @@
+#File name: limit_screen.kv (This file contains "Limit" button screen)
+#:kivy 1.8.0
+
+
+<Limit_Screen@BoxLayout>:
+    limit_display: limit_display
+    orientation: 'vertical'
+    TextInput:
+        id: limit_display
+        size_hint: 1, .25
+        font_name: 'ArabDances.ttf'
+        font_size: self.height/2
+        multiline: False
+        on_text: self.text = self.text[:15]
+        text: '0'
+    BoxLayout:
+        size_hint: 1, .12
+        Digitas_Hotkey_Button:
+            text: 'Cancel'
+            on_release: app.root.sm.current = 'Home_Screen'
+            on_release: app.root.sm.transition.direction = 'right'
+        Digitas_Hotkey_Button:
+            text: 'Set'
+            on_release: app.root.sm.current = 'Home_Screen'
+            on_release: app.root.sm.transition.direction = 'right'
+            on_release: app.root.Limit(app.root.sm.limit_screen.limit_display)
+    Button:
+        size_hint: 1, .63
+        text: 'keyboard'

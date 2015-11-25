@@ -1,0 +1,52 @@
+#File name: settings_screen.kv (This file contains "Settings Screen" contents)
+#:kivy 1.8.0
+
+
+<Settings_Screen@BoxLayout>:
+    screen_manager_sm:screen_manager_sm
+    orientation: 'vertical'
+	BoxLayout:
+	    size_hint: 1, .20
+	    Label:
+		    size_hint_x: .80
+		    text: 'Vibration'
+		ToggleButton:
+		    size_hint_x: .2
+		    text: 'On'
+    BoxLayout:
+	    size_hint: 1, .20
+	    Label:
+		    size_hint_x: .80
+		    text: 'Mute App'
+		ToggleButton:
+		    size_hint_x: .2
+		    text: 'Yes'
+	ScreenManager:
+	    id: screen_manager_sm
+	    size_hint: 1, .60
+	    Screen:
+		    BoxLayout:
+			    orientation: 'vertical'
+				Button:
+				    text: 'Theme'
+					on_release: root.screen_manager_sm.current = 'Theme'
+			    Button:
+				    name: 'Location'
+					text: 'Location'
+					on_release: root.screen_manager_sm.current = 'Location'
+				Button:
+				    name: 'Language'
+					text: 'Language'
+					on_release: root.screen_manager_sm.current = 'Language'
+		Screen:
+		    name: 'Theme'
+			Label:
+			    text: 'Theme'
+		Screen:
+		    name: 'Location'
+			Label:
+			    text: 'Location'
+		Screen:
+		    name: 'Language'
+		    Button:
+			    text: 'Language'

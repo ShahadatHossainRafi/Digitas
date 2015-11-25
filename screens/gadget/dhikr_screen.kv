@@ -1,0 +1,69 @@
+#File name = dhikr_screen.kv
+#:kivy 1.8.0
+
+<Dhikr_Screen@BoxLayout>:
+    ScrollView:
+        GridLayout:
+            cols: 1
+            size_hint_y: None
+            height: 1000
+            BoxLayout:
+                orientation: "vertical"
+                size_hint: 1, .93
+                Label:
+                    size_hint_y: None
+                    height: "10dp"
+                Label:
+                    text_size: self.size
+                    valign: "top"
+                    text:
+                        '''[b]Hadith: [/b]"He who says, Subhan-Allahi wa bihamdih one hundred times a day, his sins will be obliterated even if they are equal to the extent of the foam of the sea."
+                        [b]Meaning: [/b] Glory and praise be to Allah.
+                        [b]Sanad: [/b]Abu Hurairah. (R.A.).
+                        [b]Mentioned in: [/b] Al-Bukhari and Muslim.
+                        '''
+                    markup: True
+                Label:
+                    text_size: self.size
+                    valign: "top"
+                    text:
+                        '''[b]Hadith: [/b]"He who repeats after every prayer, Subhan Allah (Glory be to Allah) thirty-three times, Al-hamdu lillah (praise be to Allah) thirty-three times, Allahu Akbar (Allah is Greatest) thirty-three times and completes the hundred with La ilaha illallahu, wahdahu la sharika lahu, lahul-mulku wa lahul-hamdu, wa Huwa `ala kulli shaiin qadir (There is no true god except Allah. He is One and He has no partner. His is the sovereignty and His is the praise, and He is Omnipotent) will have all his sins pardoned even if they may be as large as the foam on the surface of the sea."
+                        [b]Sanad: [/b]Abu Hurairah (R.A.).
+                        [b]Mentioned in: [/b] At-Tirmidhi.
+                        '''
+                    markup: True
+                Label:
+                    text_size: self.size
+                    valign: "top"
+                    text:
+                        '''[b]Hadith: [/b]"He who utters ten times, La ilaha illallahu, wahdahu la sharika lahu, lahulmulku wa lahulhamdu, wa Huwa `ala kulli shain qadir, he will have a reward equal to that for freeing four slaves from the progeny of Prophet Isma`il."
+                        [b]Meaning:[/b] There is no true god except Allah. He is One and He has no partner. His is the sovereignty and His is the praise, and He is Omnipotent
+                        [b]Sanad: [/b] Abu Ayyub Al-Ansari (R.A.).
+                        [b]Mentioned in: [/b] Al-Bukhari and Muslim.
+                        '''
+                    markup: True
+                Label:
+                    text_size: self.size
+                    valign: "top"
+                    text:
+                        '''[b]Hadith: [/b]"There are two statements that are light on the tongue, heavy on the scales, and beloved to the Most Merciful... Subahana Allahi wa bihamdih and Subhana Allahi Al-`Azeem"
+                        [b]Meaning:[/b]Glory and praise be to Allah and Glorified is Allah, the Most Great.
+                        [b]Sanad: [/b] (Abu Hurairah (R.A.).
+                        [b]Mentioned in: [/b] Al-Bukhari.
+                        '''
+                    markup: True
+
+            BoxLayout:
+                size_hint: 1, .04
+                Label:
+                    size_hint_x: .37
+                Digitas_Hotkey_Button:
+                    size_hint_x: .26
+                    text: "Back"
+                    on_release: root.gadget_screen_manager.current = "GadgetScreenHome"
+                    on_release: root.gadget_screen_manager.transition.direction = "right"
+                Label:
+                    size_hint_x: .37
+
+            Date:
+                size_hint: 1, .03

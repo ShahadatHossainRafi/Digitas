@@ -1,0 +1,158 @@
+/*
+# ------------------------------------------------------------------------
+# JA Teline III Extra - Version 1.3 - Licence Owner jSharing.COM
+# ------------------------------------------------------------------------
+# Copyright (C) Lifetime Joomla Just for Sharing, Ltd. All Rights Reserved.
+# @license - Copyrighted Commercial Software
+# Author: Joomla Just for Sharing
+# Websites:  http://jsharing.com -  http://jsharing.net
+# This file may not be redistributed in whole or significant part.
+# ------------------------------------------------------------------------
+*/
+
+#ja-zinfpwrap {
+	color:#4E4E4E;
+	font-family:Verdana;
+	font-size:11px;
+}
+
+#ja-zinfp {
+	margin:10px;
+}
+
+/* LAYOUT: TELINE II
+--------------------------------------------- */
+/* Featured News ----*/
+.ja-zinfp-featured {
+	width: 100%;
+	background: #77879E; /* url(dot.gif) repeat-y right #EBF2F7; */
+	border:solid 1px #000;
+	border-top: solid 1px #ddd;
+	overflow: hidden;
+}
+
+.ja-zinfp-featured h4.ja-zintitle {
+	margin: 0 0 5px !important;
+	padding: 0 !important;
+	font-size: 110%;
+}
+
+.ja-zinfp-featured img {
+	margin: 0 0 10px !important;
+	padding: 0 !important;
+}
+
+.ja-zinfp-featured .ja-zincontent {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px solid #ddd;
+}
+
+/* Normal News ----*/
+.ja-zinfp-normal { width: 100%; }
+
+.ja-zinfp-normal .ja-zincontent img {
+	float: right;
+	margin: 5px 0 5px 10px !important;
+}
+
+.ja-zinfp-normal .ja-zincontent {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left:5px;
+	/* border-top: 1px solid #ddd; */
+	background:url("arrow.png") no-repeat scroll 0px 8px transparent;
+}
+
+/* Misc. ----*/
+#ja-zinfp .first {
+	border-top: 0;
+}
+#Mod174 #ja-zinfp .first {
+	text-align:justify;
+}
+/* LAYOUT: TELINE III
+--------------------------------------------- */
+.ja-zinfp-normal .inactive img,
+.ja-zinfp-normal .inactive p {
+	display: none;
+}
+
+.ja-zinfp-normal .active img,
+.ja-zinfp-normal .active p {
+	display: block;
+}
+
+/* LAYOUT: HEADLINES
+--------------------------------------------- */
+#ja-zinhlwrap {
+	border-bottom: 1px solid #ddd;
+	margin-right: 1px;
+}
+
+.ja-zincontent .inner {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#ja-zinhlwrap h4.ja-zintitle {
+	font-size: 110%;
+}
+
+.ja-zincontent img {
+	margin-right: 15px;
+}
+
+/* Control bar --- */
+.ja-zinhl-controlbar {
+	position: absolute;
+	top: 250px;
+	right: 15px;
+	padding: 5px 0;
+	display: block;
+}
+
+.ja-zinhl-controlbar ul {
+	margin: 0 10px !important;
+	padding: 0 !important;
+	float: left;
+}
+
+.ja-zinhl-controlbar li {
+	margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	display: inline;
+}
+
+#ja-zinhl-counter {
+	background: #333;
+	color: #fff;
+	padding: 1px 5px;
+	font-size: 92%;
+	letter-spacing: 1px;
+}
+
+.ja-zinfp-normal h4.ja-zintitle{
+font-size:11px;
+font-family:Verdana;
+color:#2155AB;
+}
+.ja-zinfp-featured .first a{
+color:#000;
+}
+.ja-zinfp-featured .first,.ja-zinfp-featured .first h4.ja-zintitle a{
+color:#fff;
+}
+#ja-zinfpwrap{
+float:right;
+/* width:49.5%; I$L@M */
+}
+.editorchoice{
+color:#E46101;
+font-size:12px;
+font-family:Verdana;
+border-bottom:solid 3px #77879E;
+padding-left:3px !important;
+padding-bottom:2px !important;
+}

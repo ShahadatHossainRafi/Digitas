@@ -1,0 +1,94 @@
+#File name: salat_screen.kv (This file contains "Salat Screen" contents)
+#:kivy 1.8.0
+
+
+<Salat_Time_Label@Label>:
+	canvas:
+	    Line:
+		    points: self.x, self.y, self.width, self.y
+
+<Padding_Label@Label>:
+    size_hint_x: None
+	width: '10dp'
+
+<Salat_Screen@BoxLayout>:
+    orientation: 'vertical'
+	Label:
+	    size_hint_y: None
+		height: '5dp'
+	Label:
+	    size_hint: 1, .04
+	    text: '+6 GMT'
+	Label:
+	    size_hint: 1, .04
+	    text: 'Dhaka, Bangladesh'
+
+	GridLayout:
+	    cols: 5
+	    size_hint: 1, .82
+
+		Padding_Label:
+		Salat_Time_Label:
+		    text: 'Salat'
+		Salat_Time_Label:
+		    text: 'Starts'
+		Salat_Time_Label:
+		    text: 'Ends'
+			
+		Padding_Label:
+		Salat_Time_Label:
+		    text: 'Fajr'
+		Salat_Time_Label:
+		    text: '4.30 AM'
+		Salat_Time_Label:
+		    text: '6 AM'
+		Padding_Label:
+			
+		Padding_Label:
+		Salat_Time_Label:
+		    text: 'Duhar'
+		Salat_Time_Label:
+		    text: '1 PM'
+		Salat_Time_Label:
+		    text: '3 PM'
+		Padding_Label:
+		
+		Padding_Label:
+		Salat_Time_Label:
+		    text: 'Asar'
+		Salat_Time_Label:
+		    text: '1 PM'
+		Salat_Time_Label:
+		    text: '3 PM'
+		Padding_Label:
+		
+		Padding_Label:
+		Salat_Time_Label:
+		    text: 'Maghrib'
+		Salat_Time_Label:
+		    text: '1 PM'
+		Salat_Time_Label:
+		    text: '3 PM'
+		Padding_Label:
+		
+		Padding_Label:
+		Salat_Time_Label:
+		    text: 'Esha'
+		Salat_Time_Label:
+		    text: '1 PM'
+		Salat_Time_Label:
+		    text: '3 PM'
+		Padding_Label:
+
+		Padding_Label:
+		Salat_Time_Label:
+		    text: 'Tahajjud'
+		Salat_Time_Label:
+		    text: '1 PM'
+		Salat_Time_Label:
+		    text: '3 PM'
+		Padding_Label:
+		
+	Button:
+	    text: 'Change Location'
+	    size_hint: 1, .10

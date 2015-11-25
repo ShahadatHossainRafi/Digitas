@@ -1,0 +1,73 @@
+#File name: tools_screen.kv (This file contains "Settings Screen" contents)
+#:kivy 1.8.0
+
+
+<Gadget_Screen@BoxLayout>:
+    orientation: "vertical"
+    gadget_screen_manager: gadget_screen_manager
+    ScreenManager:
+        id: gadget_screen_manager
+        Screen:
+            name: 'GadgetScreenHome'
+            BoxLayout:
+                orientation: 'vertical'
+                Button:
+                    text: 'Prayer Times'
+                    on_release: root.gadget_screen_manager.current = 'PrayerTimes'
+                Button:
+                    text: 'Compass'
+                    on_release: root.gadget_screen_manager.current = 'Compass'
+                Button:
+                    text: 'Dhikr'
+                    on_release: root.gadget_screen_manager.current = 'Dhikr'
+                    on_release: root.gadget_screen_manager.transition.direction = "left"
+                Button:
+                    text: 'Hijri Calendar'
+                    on_release: root.gadget_screen_manager.current = 'HijriCalendar'
+                    on_release: root.gadget_screen_manager.transition.direction = "left"
+                Button:
+                    text: 'Alarm'
+                    on_release: root.gadget_screen_manager.current = 'Alarm'
+                Button:
+                    text: 'Adan Alarm'
+                    on_release: root.gadget_screen_manager.current = 'AdanAlarm'
+        Screen:
+            name: 'PrayerTimes'
+            PrayerTimesScreen:
+        Screen:
+            name: 'Compass'
+            CompassScreen:
+        Screen:
+            name: 'Dhikr'
+            Dhikr_Screen:
+                gadget_screen_manager: gadget_screen_manager
+        Screen:
+            name: 'HijriCalendar'
+            HijriCalendarScreen:
+                gadget_screen_manager: gadget_screen_manager
+        Screen:
+            name: 'Alarm'
+            AlarmScreen:
+        Screen:
+            name: 'AdanAlarm'
+            AdanAlarmScreen:
+
+<PrayerTimesScreen@BoxLayout>:
+    Label:
+        text: 'P'
+
+<CompassScreen@BoxLayout>:
+    Label:
+        text: 'C'
+
+<AlarmScreen@BoxLayout>:
+    Label:
+        text: 'A'
+
+<AdanAlarmScreen@BoxLayout>:
+    Label:
+        text: 'A.A.'
+
+#Date section
+    Date:
+        size_hint: 1, .07

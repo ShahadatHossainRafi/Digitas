@@ -1,0 +1,20 @@
+#File Name: savescreen.kv
+#:kivy 1.9.0
+
+<SaveScreen@BoxLayout>:
+    orientation: "vertical"
+    TextInput:
+        id: _text_input
+        size_hint: 1, .4
+        on_text: app.textfun(_text_input.text)
+    BoxLayout:
+        size_hint: 1, .10
+        Button:
+            text: "Done"
+        Button:
+            text: "Open File"
+            on_release: root._screen_manager.current = "OpenScreen"
+    BoxLayout:
+        size_hint: 1, .6
+        Button:
+            text: "on screen keyboard"

@@ -1,0 +1,11 @@
+BoxLayout:
+    ScreenManager:
+        id: _screen_manager
+        Screen:
+            name: "SaveScreen"
+            SaveScreen:
+                _screen_manager: _screen_manager
+        Screen:
+            name: "OpenScreen"
+            OpenScreen:
+                _screen_manager: _screen_manager

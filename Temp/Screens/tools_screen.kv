@@ -1,0 +1,61 @@
+#File name: tools_screen.kv (This file contains "Settings Screen" contents)
+#:kivy 1.8.0
+
+
+<Jikir@BoxLayout>:
+    Label:
+	    text: 'J'
+		
+<Ramadan_info@BoxLayout>:
+    Label:
+	    text: 'R'
+
+<Compass@BoxLayout>:
+    Label:
+	    text: 'C'
+
+<Alarm@BoxLayout>:
+    Label:
+	    text: 'A'
+
+<Adan_Alarm@BoxLayout>:
+    Label:
+	    text: 'Adan Alarm'
+
+<Tools_Screen@BoxLayout>:
+    tools_screen_manager: tools_screen_manager
+    ScreenManager:
+	    id: tools_screen_manager
+	    Screen:
+		    BoxLayout:
+			    orientation: 'vertical'
+			    Button:
+				    text: 'Jikir'
+					on_release: root.tools_screen_manager.current = 'Jikir'
+				Button:
+				    text: 'Ramadan Info'
+					on_release: root.tools_screen_manager.current = 'Ramadan_Info'
+				Button:
+				    text: 'Compass'
+					on_release: root.tools_screen_manager.current = 'Compass'
+				Button:
+				    text: 'Alarm'
+					on_release: root.tools_screen_manager.current = 'Alarm'
+				Button:
+				    text: 'Adan Alarm'
+					on_release: root.tools_screen_manager.current = 'Adan_Alarm'
+		Screen:
+		    name: 'Jikir'
+			Jikir:
+		Screen:
+		    name: 'Ramadan_Info'
+		    Ramadan_info:
+		Screen:
+		    name: 'Compass'
+		    Compass:
+		Screen:
+		    name: 'Alarm'
+		    Alarm:
+		Screen:
+		    name: 'Adan_Alarm'
+		    Adan_Alarm:

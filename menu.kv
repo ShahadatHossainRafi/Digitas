@@ -1,0 +1,25 @@
+#File name: menu.kv (This file contains "Menu" section's design)
+#:kivy 1.8.0
+
+
+<Menu@BoxLayout>:
+    Digitas_Menu_Button:
+        text: 'Home'
+        on_release: root.sm.current = 'Home_Screen'
+        on_release: root.sm.transition.direction = 'left'
+        state: "down"
+
+    Digitas_Menu_Button:
+        text: 'Gadget'
+        on_release: root.sm.current = 'Gadget_Screen'
+        on_release: root.sm.transition.direction = 'left'
+
+    Digitas_Menu_Button:
+        text: 'Setting'
+        on_release: root.sm.current = 'Settings_Screen'
+        on_release: root.sm.transition.direction = 'left'
+
+    Digitas_Menu_Button:
+        text: 'About'
+        on_release: root.sm.current = 'About_Screen'
+        on_release: root.sm.transition.direction = 'left'

@@ -1,0 +1,28 @@
+#File name: open_screen.kv (This file contains "Open" button screen)
+#:kivy 1.8.0
+
+
+<Open_Screen@BoxLayout>:
+    orientation: 'vertical'
+    TextInput:
+	    size_hint: 1, .10
+		multiline: False
+		font_name: 'ArabDances.ttf'
+		font_size: '40dp'
+		input_filter: 'int'
+		input_type: 'number'
+		use_bubble: True
+	    text: 'Open'
+	BoxLayout:
+	    size_hint: 1, .12
+	    Digitas_Hotkey_Button:
+		    text: 'Cancel'
+			on_release: app.root.sm.current = 'Home_Screen'
+			on_release: app.root.sm.transition.direction = 'right'
+		Digitas_Hotkey_Button:
+		    text: 'Open'
+			on_release: app.root.sm.current = 'Home_Screen'
+			on_release: app.root.sm.transition.direction = 'right'
+	Button:
+	    size_hint: 1, .63
+	    text: 'keyboard'

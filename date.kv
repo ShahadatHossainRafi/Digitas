@@ -1,0 +1,12 @@
+#File name: Date.kv (This file contains "Date" section's design)
+#:kivy 1.8.0
+#:import date engine.date.date.date
+
+<Date@BoxLayout>:
+    Label:
+        font_size: self.width/20
+        text_size: self.size
+        halign: "center"
+        valign: "middle"
+        text: "[b]%s[/b]" %date
+        markup: True

@@ -1,0 +1,29 @@
+#File name: save_screen.kv (This file contains "Save" button screen)
+#:kivy 1.8.0
+
+
+<Save_Screen@BoxLayout>:
+    save_display: save_display
+    orientation: 'vertical'
+    TextInput:
+	    id: save_display
+	    size_hint: 1, .25
+		font_name: 'ArabDances.ttf'
+		font_size: self.height/2
+		multiline: False
+		on_text: self.text = self.text[:20]
+	    text:
+	BoxLayout:
+	    size_hint: 1, .12
+	    Digitas_Hotkey_Button:
+		    text: 'Cancel'
+			on_release: app.root.sm.current = 'Home_Screen'
+			on_release: app.root.sm.transition.direction = 'right'
+		Digitas_Hotkey_Button:
+		    text: 'Save'
+			on_release: app.root.sm.current = 'Home_Screen'
+			on_release: app.root.sm.transition.direction = 'right'
+			on_release: app.root.Save(app.root.sm.save_screen.save_display)
+	Button:
+	    size_hint: 1, .63
+	    text: 'keyboard'

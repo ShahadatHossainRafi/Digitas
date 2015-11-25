@@ -1,0 +1,126 @@
+#File name: save_screen.kv (This file contains "Save" button screen)
+#:kivy 1.8.0
+
+
+<Save_Screen@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_y: .93
+    ScrollView:
+        GridLayout:
+            cols: 1
+            size_hint_y: None
+            height: "500dp"
+            BoxLayout:
+                Label:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .80
+                    text: "Slot 1"
+                Button:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .20
+                    text: "Save"
+                    on_release: app.root.Save_Fun1(app.root.sm.home_screen.home_screen_display.text)
+            BoxLayout:
+                Label:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .80
+                    text: "Slot 2"
+                Button:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .20
+                    text: "Save"
+                    on_release: app.root.Save_Fun2(app.root.sm.home_screen.home_screen_display.text)
+            BoxLayout:
+                Label:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .80
+                    text: "Slot 3"
+                Button:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .20
+                    text: "Save"
+            BoxLayout:
+                Label:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .80
+                    text: "Slot 4"
+                Button:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .20
+                    text: "Save"
+            BoxLayout:
+                Label:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .80
+                    text: "Slot 5"
+                Button:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .20
+                    text: "Save"
+            BoxLayout:
+                Label:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .80
+                    text: "Slot 6"
+                Button:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .20
+                    text: "Save"
+            BoxLayout:
+                Label:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .80
+                    text: "Slot 7"
+                Button:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .20
+                    text: "Save"
+            BoxLayout:
+                Label:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .80
+                    text: "Slot 8"
+                Button:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .20
+                    text: "Save"
+            BoxLayout:
+                Label:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .80
+                    text: "Slot 9"
+                Button:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .20
+                    text: "Save"
+            BoxLayout:
+                Label:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .80
+                    text: "Slot 10"
+                Button:
+                    size_hint_y: None
+                    height: "50dp"
+                    size_hint_x: .20
+                    text: "Save"
+    Date:
+        size_hint_y: .07

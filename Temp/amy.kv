@@ -1,0 +1,7 @@
+Spinner:
+    size_hint: .25, .10
+    pos_hint: {"x": 0, "y": .80}
+    text: "Parent"
+    values: ("chield 1", "chield 2", "chield 3")
+    on_text:
+        if self.text in self.values: sm.current = self.text\n self.text = 'default text'

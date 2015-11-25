@@ -1,0 +1,26 @@
+#File name: buttons.kv (This file contains different button styles used in this software)
+#:kivy 1.8.0
+#:import vibrator plyer.vibrator
+#:import Hotsnd engine.sound.sound.Hotsnd
+
+
+#Button style used for "Hotkey" buttons.
+<Digitas_Hotkey_Button@Button>:
+    font_name: 'ArabDances.ttf'
+    font_size: self.width/4
+    on_press: Hotsnd()
+
+
+#Button style used for "Count" button.
+<Digitas_Count_Button@Button>:
+    font_name: 'ArabDances.ttf'
+    font_size: self.width/6
+#    on_release: vibrator.vibrate(1)
+ 
+
+#Button style used for "Menu" and "Settings" buttons.	
+<Digitas_Menu_Button@ToggleButton>:
+    font_name: 'ArabDances.ttf'
+    font_size: self.height/2+3
+    group: "digitas_menu_button"
+    allow_no_selection: False

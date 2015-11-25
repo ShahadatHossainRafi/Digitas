@@ -1,0 +1,30 @@
+#File name: reset_to_screen.kv (This file contains "Reset to" button screen)
+#:kivy 1.8.0
+
+
+<Reset_To_Screen@BoxLayout>:
+    text_input: text_input
+    orientation: 'vertical'
+    TextInput:
+	    id: text_input
+	    size_hint: 1, .25
+		font_name: 'ArabDances.ttf'
+		font_size: self.height/2
+		multiline: False
+		on_text: self.text = self.text[:15]
+	    text: '0'
+	BoxLayout:
+	    size_hint: 1, .12
+	    Digitas_Hotkey_Button:
+		    text: 'Cancel'
+			on_release: app.root.sm.current = 'Home_Screen'
+			on_release: app.root.sm.transition.direction = 'right'
+		Digitas_Hotkey_Button:
+		    text: 'Reset'
+			on_release: app.root.sm.current = 'Home_Screen'
+			on_release: app.root.sm.transition.direction = 'right'
+			on_release: app.root.sm.home_screen.home_screen_display.text = app.root.sm.reset_to_screen.text_input.text
+			on_release: app.root.Reset_to(app.root.sm.reset_to_screen.text_input)
+	Button:
+	    size_hint: 1, .63
+	    text: 'keyboard'

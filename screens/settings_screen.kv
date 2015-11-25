@@ -1,0 +1,82 @@
+#File name: settings_screen.kv (This file contains "Settings Screen" contents)
+#:kivy 1.8.0
+
+#:import appvar engine.settings.appvar.appvar
+#:import AppVarFun engine.settings.settings.AppVarFun
+
+<Settings_Screen@BoxLayout>:
+    orientation: "vertical"
+    BoxLayout:
+        size_hint: 1, .18
+        Label:
+            size_hint_x: .10
+        Label:
+            text_size: self.size
+            valign: "middle"
+            text: '[b]Vibration[/b]'
+            markup: True
+        Switch:
+
+    BoxLayout:
+        size_hint: 1, .18
+        Label:
+            size_hint_x: .10
+        Label:
+            text_size: self.size
+            valign: "middle"
+            text: '[b]Startup Sound[/b]'
+            markup: True
+        Switch:
+
+    BoxLayout:
+        size_hint: 1, .19
+        Label:
+            size_hint_x: .10
+        Label:
+            text_size: self.size
+            valign: "middle"
+            text: '[b]All Sound[/b]'
+            markup: True
+        Switch:
+            active: appvar
+            on_active: AppVarFun(*args)
+
+    BoxLayout:
+        size_hint: 1, .19
+        BoxLayout:
+            Label:
+                size_hint_x: .10
+            Label:
+                text_size: self.size
+                valign: "middle"
+                text: '[b]Language[/b]'
+                markup: True
+        RelativeLayout
+            Button:
+                size_hint: None, None
+                size: 83, 60
+                pos_hint: {"center_x": .52, "center_y": .5}
+                text: "[b]>>[/b]"
+                markup: True
+
+    BoxLayout:
+        size_hint: 1, .19
+        BoxLayout:
+            Label:
+                size_hint_x: .10
+            Label:
+                text_size: self.size
+                valign: "middle"
+                text: '[b]Time Zone[/b]'
+                markup: True
+        RelativeLayout
+            Button:
+                size_hint: None, None
+                size: 83, 60
+                pos_hint: {"center_x": .52, "center_y": .5}
+                text: "[b]>>[/b]"
+                markup: True
+
+#Date section
+    Date:
+        size_hint: 1, .07

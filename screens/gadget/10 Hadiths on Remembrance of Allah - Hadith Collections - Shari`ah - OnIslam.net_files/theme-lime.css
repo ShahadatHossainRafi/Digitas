@@ -1,0 +1,63 @@
+/*
+# ------------------------------------------------------------------------
+# JA Teline III Extra - Version 1.3 - Licence Owner jSharing.COM
+# ------------------------------------------------------------------------
+# Copyright (C) Lifetime Joomla Just for Sharing, Ltd. All Rights Reserved.
+# @license - Copyrighted Commercial Software
+# Author: Joomla Just for Sharing
+# Websites:  http://jsharing.com -  http://jsharing.net
+# This file may not be redistributed in whole or significant part.
+# ------------------------------------------------------------------------
+*/
+
+.caption ,.highlight ,a {
+	color: #808a17;
+}
+
+a:hover, a:active, a:focus {
+	color: #9C162E;
+}
+
+ul.pagination a:hover, ul.pagination a:active, ul.pagination a:focus {
+	border: 1px solid #808a17;
+	background: #808a17;
+}
+
+.counter span {
+	background: #808a17;
+	border: 1px solid #808a17;
+}
+
+#jasdl-mainnav li.active a,/*dropline*/
+#jasdl-mainnav li.active a:hover,
+#jasdl-mainnav li.active a:active,
+#jasdl-mainnav li.active a:focus, 
+#ja-splitmenu li.active a,/*split*/
+#ja-splitmenu li.active a:hover,
+#ja-splitmenu li.active a:active,
+#ja-splitmenu li.active a:focus,
+#ja-cssmenu li a.active,/*split + moo*/
+#ja-cssmenu li a.active:hover,
+#ja-cssmenu li a.active:active,
+#ja-cssmenu li a.active:focus {
+	background: url(../../images/lime/mainnav-active.gif) repeat-x top #808a17;
+}
+
+#ja-subnav ul li ul li a.active {
+	color: #808a17 !important;
+}
+
+#ja-subnav ul.active {
+	background: #808a17;
+}
+
+#ja-subnav ul.active li {
+	border-left: 1px solid #B2BA5F;
+}
+
+#ja-subnav ul.active li:first-child {
+	border-left: 0;
+}
+
+/* colour 2 */
+.leading { background-color: #F7F8EC; }

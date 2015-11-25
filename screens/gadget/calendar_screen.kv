@@ -1,0 +1,95 @@
+#File name: calendar_screen.kv (Digitas calendar UI file)
+#:kivy 1.8.0
+
+<HijriCalendarScreen@BoxLayout>:
+    orientation: "vertical"
+    BoxLayout:
+        size_hint: 1, .20
+        Label:
+            text: "Month, 1436 A.H."
+    BoxLayout:
+        orientation: "vertical"
+        size_hint: 1, .63
+        BoxLayout:
+            Label:
+            Label:
+            Label:
+                text: "1"
+            Label:
+                text: "2"
+            Label:
+                text: "3"
+            Label:
+                text: "4"
+            Label:
+                text: "5"
+        BoxLayout:
+            Label:
+                text: "6"
+            Label:
+                text: "7"
+            Label:
+                text: "8"
+            Label:
+                text: "9"
+            Label:
+                text: "10"
+            Label:
+                text: "11"
+            Label:
+                text: "12"
+        BoxLayout:
+            Label:
+                text: "13"
+            Label:
+                text: "14"
+            Label:
+                text: "15"
+            Label:
+                text: "16"
+            Label:
+                text: "17"
+            Label:
+                text: "18"
+            Label:
+                text: "19"
+        BoxLayout:
+            Label:
+                text: "20"
+            Label:
+                text: "21"
+            Label:
+                text: "22"
+            Label:
+                text: "23"
+            Label:
+                text: "24"
+            Label:
+                text: "25"
+            Label:
+                text: "26"
+        BoxLayout
+            Label:
+                text: "27"
+            Label:
+                text: "28"
+            Label:
+                text: "29"
+            Label:
+                text: "30"
+            Label:
+            Label:
+            Label:
+    BoxLayout:
+        size_hint_y: .09
+        Label:
+            size_hint_x: .37
+        Digitas_Hotkey_Button:
+            size_hint_x: .26
+            text: "Back"
+            on_release: root.gadget_screen_manager.current = "GadgetScreenHome"
+            on_release: root.gadget_screen_manager.transition.direction = "right"
+        Label:
+            size_hint_x: .37
+    Date:
+        size_hint: 1, .07

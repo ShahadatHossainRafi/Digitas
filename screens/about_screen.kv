@@ -1,0 +1,73 @@
+# File Name: about.kv
+#:kivy 1.8.0
+
+
+#:import webbrowser webbrowser
+
+
+<About_Screen@BoxLayout>:
+    orientation: "vertical"
+    Label:
+        size_hint: 1, .15
+        text_size: self.size
+        halign: "center"
+        valign: "bottom"
+        markup: True
+        text: "[size=24px][b]Digitas 1.0[/b][/size]"
+    Label:
+        text_size: self.size
+        halign: "center"
+        valign: "bottom"
+        markup: True
+        text: "[b]Disclaimer[/b]\nAfter working hard and honestly to ensure sobriety of all provided information still there might be incorrect. Please use the software on your own risk."
+        text: 
+    BoxLayout:
+        size_hint: 1, .85
+        orientation: "vertical"
+        Label:
+            text_size: self.size
+            halign: "center"
+            valign: "bottom"
+            markup: True
+            text: "[b]First Release[/b]\nMay 2nd, 2015"
+        Label:
+            text_size: self.size
+            halign: "center"
+            valign: "bottom"
+            markup: True
+            text: "[b]Released On[/b]\n[color=0000ff][ref=http://www.windows.com]Windows[/ref][/color], [color=0000ff][ref=http://www.mac.com]Mac[/ref][/color], [color=0000ff][ref=http://www.Linux.com]Linux[/ref][/color], [color=0000ff][ref=http://www.iOS.com]iOS[/ref][/color], [color=0000ff][ref=http://www.Android.com]Android[/ref][/color]"
+            on_ref_press: webbrowser.open(args[1])
+        Label:
+            text_size: self.size
+            halign: "center"
+            valign: "bottom"
+            markup: True
+            text: "[b]Technology[/b]\nPython 2.7, Kivy 1.9.0, Pycalverter, Plyer"
+        Label:
+            text_size: self.size
+            halign: "center"
+            valign: "bottom"
+            markup: True
+            text: "[b]Developer[/b]\nShahadat Hossain"
+        Label:
+            text_size: self.size
+            halign: "center"
+            valign: "bottom"
+            markup: True
+            text: "[b]Email[/b]\nrafi@in2rafi.com"
+        Label:
+            text_size: self.size
+            halign: "center"
+            valign: "bottom"
+            markup: True
+            text: "[b]Website[/b]\n[color=0000ff][ref=]http://www.in2rafi.com[/ref][/color]"
+            on_ref_press: webbrowser.open("http://www.in2rafi.com")
+        Label: #This Label is creating a gap between website and window bottom
+
+
+
+
+
+
+# Digitas released date should be added
+# Windows, Linux, Mac O/S etc. links should be added

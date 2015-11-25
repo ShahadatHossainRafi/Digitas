@@ -1,0 +1,54 @@
+#File name: digitas.kv (Digitas main .kv file)
+#:kivy 1.8.0
+#:import WipeTransition kivy.uix.screenmanager.WipeTransition
+
+
+DigitasMain:
+
+<DigitasMain>:
+    orientation: 'vertical'
+    sm: sm
+
+#Menu section
+    Menu:
+        sm: sm
+        size_hint: 1, .08
+
+    ScreenManager:
+        size_hint: 1, .92
+        id: sm
+        home_screen: home_screen
+        reset_to_screen: reset_to_screen
+        limit_screen: limit_screen
+        save_screen: save_screen
+        Screen:
+            name: 'Home_Screen'
+            Home_Screen:
+                id: home_screen
+        Screen:
+            name: 'Salat_Screen'
+            Salat_Screen:
+        Screen:
+            name: 'Gadget_Screen'
+            Gadget_Screen:
+        Screen:
+            name: 'Settings_Screen'
+            Settings_Screen:
+        Screen:
+            name: 'About_Screen'
+            About_Screen:
+        Screen:
+            name: 'Reset_To_Screen'
+            Reset_To_Screen:
+                id: reset_to_screen
+        Screen:
+            name: 'Limit_Screen'
+            Limit_Screen:
+                id: limit_screen
+        Screen:
+            name: 'Save_Screen'
+            Save_Screen:
+                id: save_screen
+        Screen:
+            name: 'Open_Screen'
+            Open_Screen:

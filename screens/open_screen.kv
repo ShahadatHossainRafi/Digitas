@@ -1,0 +1,32 @@
+#File name: open_screen.kv (This file contains "Open" button screen)
+#:kivy 1.8.0
+#:import LoaderFun1 engine.home.LoaderFun1
+#:import LoaderFun2 engine.home.LoaderFun2
+#:import slot1 engine.save.slot1
+#:import value1 engine.save.value1
+#:import slot2 engine.save.slot2
+#:import value2 engine.save.value2
+
+<Open_Screen@BoxLayout>:
+    orientation: 'vertical'
+    ScrollView:
+        GridLayout:
+            cols: 1
+            Button:
+                text: slot1
+                on_release: app.root.sm.home_screen.home_screen_display.text = str(value1)
+                on_release: LoaderFun1()
+            Button:
+                text: slot2
+                on_release: app.root.sm.home_screen.home_screen_display.text = str(value2)
+                on_release: LoaderFun2()
+            Button:
+                text: "variable"
+            Button:
+                text: "variable"
+    BoxLayout:
+        size_hint: 1, .12
+        Button:
+            text: 'Back'
+            on_release: app.root.sm.current = 'Home_Screen'
+            on_release: app.root.sm.transition.direction = 'right'

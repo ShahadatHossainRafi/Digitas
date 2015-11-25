@@ -1,0 +1,12 @@
+#:import fun fun.fun
+Root:
+    orientation: "vertical"
+    TextInput:
+        id: _ti
+        multiline: False
+        on_text_validate: fun(_ti.text)
+    BoxLayout:
+        Button:
+            text: "Set Alarm"
+        Button:
+            text: "Stop"

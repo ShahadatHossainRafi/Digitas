@@ -1,0 +1,50 @@
+/*
+# ------------------------------------------------------------------------
+# JA Teline III Extra - Version 1.3 - Licence Owner jSharing.COM
+# ------------------------------------------------------------------------
+# Copyright (C) Lifetime Joomla Just for Sharing, Ltd. All Rights Reserved.
+# @license - Copyrighted Commercial Software
+# Author: Joomla Just for Sharing
+# Websites:  http://jsharing.com -  http://jsharing.net
+# This file may not be redistributed in whole or significant part.
+# ------------------------------------------------------------------------
+*/
+
+#ja-splitmenu {
+	position: relative;
+}
+
+#ja-splitmenu ul {}
+
+#ja-splitmenu li {
+	float: left;
+	padding: 0;
+	margin: 0;
+	border-right: 1px solid #ccc;
+}
+
+#ja-splitmenu a {
+	display: block;
+	float: left;
+	text-decoration: none;
+	padding: 10px;
+	color: #000;
+
+	/* Commented By Omar Badr */
+	/* text-transform: UPPERCASE; */
+}
+
+#ja-splitmenu a:hover,
+#ja-splitmenu a:active,
+#ja-splitmenu a:focus {
+	background: url(../../images/mainnav-hover.gif) repeat-x bottom #f7f7f7;
+	color: #000;
+}
+
+#ja-splitmenu li.active a,
+#ja-splitmenu li.active a:hover,
+#ja-splitmenu li.active a:active,
+#ja-splitmenu li.active a:focus {
+	background: url(../../images/mainnav-active.gif) repeat-x top #333;
+	color: #fff;
+}

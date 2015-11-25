@@ -1,0 +1,45 @@
+#File name: home_screen.kv (This file contains "Home Screen" contents)
+#:kivy 1.8.0
+#:import var loader.var
+
+<Home_Screen@BoxLayout>:
+    home_screen_display: home_screen_display
+    orientation: 'vertical'
+    Label:
+	    id:home_screen_display
+	    size_hint: 1, .25
+		font_name: 'ArabDances.ttf'
+		font_size: self.height/2
+		text: var
+	Digitas_Count_Button:
+	    size_hint: 1, .50
+	    text: 'Count'
+		on_release: app.root.Counter(root.home_screen_display)
+	BoxLayout:
+	    size_hint: 1, .25
+		orientation: 'vertical'
+		BoxLayout:
+    		Digitas_Hotkey_Button:
+	    	    text: 'Reset to'
+		    	on_release: app.root.sm.current = 'Reset_To_Screen'
+			    on_release: app.root.sm.transition.direction = 'left'
+				on_release: app.root.sm.reset_to_screen.text_input.text = app.root.sm.home_screen.home_screen_display.text
+		    Digitas_Hotkey_Button:
+		        text: 'Reset'
+				on_release: app.root.Reset(root.home_screen_display)
+		    Digitas_Hotkey_Button:
+		        text: 'Back'
+				on_release: app.root.Back(root.home_screen_display)
+		BoxLayout:
+    		Digitas_Hotkey_Button:
+	    	    text: 'Limit'
+		    	on_release: app.root.sm.current = 'Limit_Screen'
+			    on_release: app.root.sm.transition.direction = 'left'
+		    Digitas_Hotkey_Button:
+		        text: 'Save'
+			    on_release: app.root.sm.current = 'Save_Screen'
+			    on_release: app.root.sm.transition.direction = 'left'
+		    Digitas_Hotkey_Button:
+		        text: 'Open'
+			    on_release: app.root.sm.current = 'Open_Screen'
+			    on_release: app.root.sm.transition.direction = 'left'

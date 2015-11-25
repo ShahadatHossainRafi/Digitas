@@ -1,0 +1,12 @@
+#File Name: openscreen.kv
+#:kivy 1.9.0
+
+<OpenScreen@BoxLayout>:
+    orientation: "vertical"
+    ScrollView:
+        size_hint: 1, .90
+    BoxLayout:
+        size_hint: 1, .10
+        Button:
+            text: "Save File"
+            on_release: root._screen_manager.current = "SaveScreen"

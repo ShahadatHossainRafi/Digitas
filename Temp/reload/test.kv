@@ -1,0 +1,10 @@
+#:import activevar activevar.activevar
+#:import activefun settings.activefun
+
+BoxLayout:
+    Button:
+        text: "switch is off now" if activevar==0 else "switch is on now"
+    Switch:
+        active: app.activevar
+        on_active: activefun(*args)
+
